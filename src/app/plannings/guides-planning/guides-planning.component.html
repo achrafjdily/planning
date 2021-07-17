@@ -1,0 +1,9 @@
+<div class="p-5 flex flex-wrap">
+    <div class="rounded-lg border-2 border-gray-300 flex flex-col m-1 w-64" *ngFor="let day of plan; let i=index">
+        <div class="text-center bg-green-100 rounded-t-lg text-2xl font-bold py-2">Day {{ day.day }}</div>
+        <div class="p-4 flex flex-col gap-4">
+            <div *ngFor="let task of day.tasks" [class]="'p-2 bg-'+task.color+'-200 rounded-md task'">{{ task.name }}
+            </div>
+        </div>
+    </div>
+</div>
